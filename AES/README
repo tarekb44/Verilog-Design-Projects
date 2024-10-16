@@ -1,0 +1,20 @@
+To compile:
+
+vlog KeyExpansion.v AES_Pipelined.v AES_Pipelined_Testbench.v
+vsim AES_Pipelined_Testbench
+run -all
+
+Expected Output:
+Test 0:
+Plaintext:          00112233445566778899aabbccddeeff
+Key:                000102030405060708090a0b0c0d0e0f
+Ciphertext Output:  69c4e0d86a7b0430d8cdb78070b4c55a
+Expected Ciphertext:69c4e0d86a7b0430d8cdb78070b4c55a
+Test 0 Passed
+
+Test 1:
+Plaintext:          3243f6a8885a308d313198a2e0370734
+Key:                2b7e151628aed2a6abf7158809cf4f3c
+Ciphertext Output:  3925841d02dc09fbdc118597196a0b32
+Expected Ciphertext:3925841d02dc09fbdc118597196a0b32
+Test 1 Passed
